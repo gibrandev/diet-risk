@@ -1,10 +1,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  justify-content: center;
 }
 
 .description {
@@ -40,10 +40,11 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  display: flex;
   width: var(--max-width);
   max-width: 100%;
+  flex-direction: column;
+  gap: 35px;
 }
 
 .card {
@@ -149,6 +150,31 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+}
+
+.headingTitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.mainCard {
+  display: flex;
+  gap: 15px;
+}
+
+.cardContainer {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.selectOption {
+  border: 0;
+}
+
+.selectOption:focus-visible {
+  border: 0;
+  outline: none;
 }
 
 /* Enable hover only on non-touch devices */
