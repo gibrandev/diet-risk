@@ -179,9 +179,9 @@ export default function Home() {
                             </div>
                         </div>
                         <div>
-                            {data.reduce((n, {value}) => n + value, 0) <= 10 ? '✅ Your diet risk is low.' : ''}
-                            {data.reduce((n, {value}) => n + value, 0) >= 10 && data.reduce((n, {value}) => n + value, 0) < 20 ? '⚠️ Your diet risk is moderate.' : ''}
-                            {data.reduce((n, {value}) => n + value, 0) >= 20  ? '🚫 Your diet risk is high.' : ''}
+                            {data.reduce((n, {value}) => n + value, 0) < 10 ? '✅ Your diet risk is low.' : ''}
+                            {data.reduce((n, {value}) => n + value, 0) >= 10 && data.reduce((n, {value}) => n + value, 0) <= 20 ? '⚠️ Your diet risk is moderate.' : ''}
+                            {data.reduce((n, {value}) => n + value, 0) > 20  ? '🚫 Your diet risk is high.' : ''}
                         </div>
                     </div>
                 </div>
